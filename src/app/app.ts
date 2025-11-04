@@ -1,12 +1,25 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Stadium } from './stadium/stadium';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  template: `
+    <main> 
+      <header class="brand-name">
+        <img class="brand-logo"
+        src="image.png"
+        alt="logo" aria-hidden="true"
+        style="width: 100px; height: auto;">
+      </header>
+      <section class="content">
+        <app-stadium></app-stadium>
+      </section>
+    </main>
+  `,
+  styleUrl: './app.css',
+  imports:  [Stadium]
 })
 export class App {
-  protected readonly title = signal('progetto');
+  title = 'Stadium';
 }
