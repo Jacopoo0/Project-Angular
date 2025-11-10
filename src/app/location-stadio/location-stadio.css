@@ -1,0 +1,61 @@
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.lista {
+  background:black;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.lista:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.lista-foto {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.lista h2,
+.lista p {
+  padding: 0 20px;
+}
+
+.intestazione-elenco {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color:lightblue;
+  margin: 15px 0 8px;
+}
+
+.lista-location {
+  color:gainsboro;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.lista-capienza {
+  color:darkcyan;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 8px 0;
+  padding-bottom: 20px;
+}
+
+.lista-campionato {
+  color: cornflowerblue;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 8px 0;
+  padding-bottom: 20px;
+
+}

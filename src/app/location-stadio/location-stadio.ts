@@ -1,23 +1,13 @@
 import { Component, Input } from '@angular/core';
-import { Stadio } from '../location-stadio';
-import {}
+import { Stadio } from '../stadiumspec';
 
 @Component({
   selector: 'app-location-stadio',
+  standalone: true,
   imports: [],
-template: `
-  <section class="lista">
-    <img class="lista-foto"
-      [src]="locationstadio.foto"
-      alt="foto esterna di {{locationstadio.nome}}">
-    <h2 class="intestazione-elenco">{{locationstadio.nome}}</h2>
-    <p class="lista-location">{{locationstadio.città}}, {{locationstadio.stato}}</p>
-  </section>
-`
-,
+  templateUrl: './location-stadio.html',  
   styleUrl: './location-stadio.css',
 })
 export class LocationStadio {
-  @Input() Stadio!:Stadio;
-
+  @Input() locationstadio!: Stadio;
 }

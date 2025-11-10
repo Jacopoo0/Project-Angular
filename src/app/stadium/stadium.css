@@ -1,0 +1,48 @@
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 12px 20px;
+  border: 2px solid green;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: yellow;
+}
+
+button.primary {
+  padding: 12px 30px;
+  background: #667eea;
+  color: black;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button.primary:hover {
+  transform: scale(1.05);
+}
+
+.Risultato {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+}
+
+
+@media (max-width: 768px) {
+  .Risultato {
+    grid-template-columns: 1fr;
+  }
+}

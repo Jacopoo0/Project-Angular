@@ -1,0 +1,16 @@
+<section>
+  <form>
+    <input type="text" 
+           placeholder="Filtra per città..."
+           [(ngModel)]="filtroCity"
+           [ngModelOptions]="{standalone: true}"
+           name="filtro"
+           (input)="filtraStadi()">
+    <button class="primary" type="button">Cerca</button>
+  </form>
+</section>
+<section class="Risultato">
+  <app-location-stadio 
+    *ngFor="let stadio of stadioListFiltrata"
+    [locationstadio]="stadio" />
+</section>
