@@ -5,6 +5,7 @@ export interface Stadio {
   state: string;
   photo: string;
   capacity: number;
-  league:string;
-  url: string;  
+  league: string;
+  url: string;
+  color: string;  
 }

@@ -1,12 +1,17 @@
 <a [href]="locationstadio.url" target="_blank">
-  <section class="lista">
+  <section class="lista" [style.border-left]="'5px solid ' + locationstadio.color">
     <img class="lista-foto"
       [src]="locationstadio.photo"
       alt="foto esterna di {{locationstadio.name}}">
-    <h2 class="intestazione-elenco">{{locationstadio.name}}</h2>
+    <h2 class="intestazione-elenco" [style.color]="locationstadio.color">
+      {{locationstadio.name}}
+    </h2>
     <p class="lista-location">{{locationstadio.city}}, {{locationstadio.state}}</p>
     <p class="lista-capienza">Capacity: {{locationstadio.capacity}} seats</p>
-    <p class="lista-campionato">League: {{locationstadio.league}}</p>
+    <p class="lista-campionato" [style.background-color]="locationstadio.color">
+      League: {{locationstadio.league}}
+    </p>
   </section>
 </a>
+
 

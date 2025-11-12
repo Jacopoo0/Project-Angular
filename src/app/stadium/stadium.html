@@ -1,12 +1,23 @@
 <section>
   <form>
+    <select [(ngModel)]="filtroLeague" 
+            (change)="filtraStadi()"
+            name="filtroLeague"
+            class="filtro-select">
+      <option value="all">All Leagues</option>
+      <option value="Serie A">Serie A (Italy)</option>
+      <option value="Premier League">Premier League (England)</option>
+      <option value="La Liga">La Liga (Spain)</option>
+      <option value="Bundesliga">Bundesliga (Germany)</option>
+    </select>
+
+ 
     <input type="text" 
-           placeholder="Filtra per città..."
+           placeholder="Filter by name"
            [(ngModel)]="filtroCity"
            [ngModelOptions]="{standalone: true}"
-           name="filtro"
-           (input)="filtraStadi()">
-    <button class="primary" type="button">Cerca</button>
+           (input)="filtraStadi()"
+           class="filtro-input">
   </form>
 </section>
 <section class="Risultato">

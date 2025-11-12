@@ -5,12 +5,12 @@ a {
 }
 
 .lista {
-  background:black;
+  background: white;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  position: relative;
 }
 
 .lista:hover {
@@ -32,30 +32,31 @@ a {
 
 .intestazione-elenco {
   font-size: 1.4rem;
-  font-weight: 600;
-  color:lightblue;
+  font-weight: 700;
   margin: 15px 0 8px;
+  /* Il colore viene applicato dinamicamente via [style.color] */
 }
 
 .lista-location {
-  color:gainsboro;
+  color: #7f8c8d;
   font-size: 0.95rem;
   margin: 0;
 }
 
 .lista-capienza {
-  color:darkcyan;
+  color: #3498db;
   font-size: 0.9rem;
   font-weight: 500;
   margin: 8px 0;
-  padding-bottom: 20px;
 }
 
 .lista-campionato {
-  color: cornflowerblue;
+  color: white;  
   font-size: 0.9rem;
-  font-weight: 500;
-  margin: 8px 0;
-  padding-bottom: 20px;
+  font-weight: 600;
+  margin: 8px 20px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: inline-block;
 
 }

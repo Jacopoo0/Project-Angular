@@ -12,7 +12,9 @@ import { Stadio } from '../stadiumspec';
   styleUrl: './stadium.css',
 })
 export class Stadium {
+
   filtroCity: string = '';
+  filtroLeague: string = 'all';
   
   stadioList: Stadio[] = [
     {
@@ -23,7 +25,8 @@ export class Stadium {
       photo: 'sansiro.jpg',
       capacity: 80018,
       league: 'Serie A',
-      url: 'https://it.wikipedia.org/wiki/Stadio_Giuseppe_Meazza'
+      url: 'https://it.wikipedia.org/wiki/Stadio_Giuseppe_Meazza',
+      color: '#0E4C92'
     },
     {
       id: 1,
@@ -33,7 +36,8 @@ export class Stadium {
       photo: 'olimpico.jpg',
       capacity: 70634,
       league: 'Serie A',
-      url: 'https://it.wikipedia.org/wiki/Stadio_Olimpico_(Roma)'
+      url: 'https://it.wikipedia.org/wiki/Stadio_Olimpico_(Roma)',
+      color: '#C8102E'
     },
     {
       id: 2,
@@ -43,7 +47,8 @@ export class Stadium {
       photo: 'juventus.jpg',
       capacity: 41507,
       league: 'Serie A',
-      url: 'https://it.wikipedia.org/wiki/Allianz_Stadium'
+      url: 'https://it.wikipedia.org/wiki/Allianz_Stadium',
+      color: '#000000'
     },
     {
       id: 3,
@@ -53,7 +58,8 @@ export class Stadium {
       photo: 'sanpaolo.jpg',
       capacity: 54726,
       league: 'Serie A',
-      url: 'https://it.wikipedia.org/wiki/Stadio_Diego_Armando_Maradona'
+      url: 'https://it.wikipedia.org/wiki/Stadio_Diego_Armando_Maradona',
+      color: '#0067B5'
     },
     {
       id: 4,
@@ -63,7 +69,8 @@ export class Stadium {
       photo: 'bologna.jpg',
       capacity: 37411,
       league: 'Serie A',
-      url: 'https://it.wikipedia.org/wiki/Stadio_Renato_Dall%27Ara'
+      url: 'https://it.wikipedia.org/wiki/Stadio_Renato_Dall%27Ara',
+      color: '#0033A0'
     },
     {
       id: 5,
@@ -73,7 +80,8 @@ export class Stadium {
       photo: 'franchi.jpg',
       capacity: 43282,
       league: 'Serie A',
-      url: 'https://it.wikipedia.org/wiki/Stadio_Artemio_Franchi'
+      url: 'https://it.wikipedia.org/wiki/Stadio_Artemio_Franchi',
+      color: '#6A2C91'
     },
     {
       id: 6,
@@ -83,7 +91,8 @@ export class Stadium {
       photo: 'friuli.png',
       capacity: 25132,
       league: 'Serie A',
-      url: 'https://it.wikipedia.org/wiki/Stadio_Friuli'
+      url: 'https://it.wikipedia.org/wiki/Stadio_Friuli',
+      color: '#000000'
     },
     {
       id: 7,
@@ -93,7 +102,8 @@ export class Stadium {
       photo: 'newbalance.png',
       capacity: 23439,
       league: 'Serie A',
-      url: 'https://it.wikipedia.org/wiki/Stadio_di_Bergamo'
+      url: 'https://it.wikipedia.org/wiki/Stadio_di_Bergamo',
+      color: '#1A1A1A'
     },
     {
       id: 8,
@@ -103,17 +113,19 @@ export class Stadium {
       photo: 'ferraris.png',
       capacity: 36536,
       league: 'Serie A',
-      url: 'https://it.wikipedia.org/wiki/Stadio_Luigi_Ferraris'
+      url: 'https://it.wikipedia.org/wiki/Stadio_Luigi_Ferraris',
+      color: '#C8102E'
     },
     {
       id: 9,
-      name: 'Old Trafford',
-      city: 'Manchester',
-      state: 'England',
-      photo: 'oldtrafford.jpg',
-      capacity: 74197,
-      league: 'Premier League',
-      url: 'https://it.wikipedia.org/wiki/Old_Trafford'
+      name: 'Stadio Marcantonio Bentegodi',
+      city: 'Verona',
+      state: 'Italia',
+      photo: 'bentegodi.png',
+      capacity: 39371,
+      league: 'Serie A',
+      url: 'https://it.wikipedia.org/wiki/Stadio_Marcantonio_Bentegodi',
+      color: '#0E5CA9'
     },
     {
       id: 10,
@@ -123,59 +135,82 @@ export class Stadium {
       photo: 'wembley.jpg',
       capacity: 90000,
       league: 'Premier League',
-      url: 'https://en.wikipedia.org/wiki/Wembley_Stadium'
+      url: 'https://en.wikipedia.org/wiki/Wembley_Stadium',
+      color: '#034694'
     },
     {
       id: 11,
+      name: 'Old Trafford',
+      city: 'Manchester',
+      state: 'England',
+      photo: 'oldtrafford.jpg',
+      capacity: 74879,
+      league: 'Premier League',
+      url: 'https://en.wikipedia.org/wiki/Old_Trafford',
+      color: '#DA291C'
+    },
+    {
+      id: 12,
       name: 'Camp Nou',
       city: 'Barcelona',
       state: 'Spain',
       photo: 'campnou.jpg',
       capacity: 99354,
       league: 'La Liga',
-      url: 'https://en.wikipedia.org/wiki/Camp_Nou'
+      url: 'https://en.wikipedia.org/wiki/Camp_Nou',
+      color: '#A50044'
     },
     {
-      id: 12,
+      id: 13,
       name: 'Santiago Bernabéu',
       city: 'Madrid',
       state: 'Spain',
       photo: 'bernabeu.jpg',
       capacity: 81044,
       league: 'La Liga',
-      url: 'https://en.wikipedia.org/wiki/Santiago_Bernab%C3%A9u_Stadium'
+      url: 'https://en.wikipedia.org/wiki/Santiago_Bernab%C3%A9u_Stadium',
+      color: '#FEBE10'
     },
     {
-      id: 13,
+      id: 14,
       name: 'Allianz Arena',
       city: 'Munich',
       state: 'Germany',
       photo: 'allianzarena.jpg',
       capacity: 75024,
       league: 'Bundesliga',
-      url: 'https://en.wikipedia.org/wiki/Allianz_Arena'
+      url: 'https://en.wikipedia.org/wiki/Allianz_Arena',
+      color: '#DC052D'
     },
     {
-      id: 14,
+      id: 15,
       name: 'Signal Iduna Park',
       city: 'Dortmund',
       state: 'Germany',
       photo: 'dortmund.jpg',
       capacity: 81365,
       league: 'Bundesliga',
-      url: 'https://en.wikipedia.org/wiki/Signal_Iduna_Park'
+      url: 'https://en.wikipedia.org/wiki/Signal_Iduna_Park',
+      color: '#FDE100'
     }
   ];
 
   stadioListFiltrata: Stadio[] = this.stadioList;
 
+
   filtraStadi() {
-    if (!this.filtroCity) {
-      this.stadioListFiltrata = this.stadioList;
-    } else {
-      this.stadioListFiltrata = this.stadioList.filter(stadio =>
-        stadio.city.toLowerCase().includes(this.filtroCity.toLowerCase())
+    this.stadioListFiltrata = this.stadioList;
+    
+    if (this.filtroLeague !== 'all') {
+      this.stadioListFiltrata = this.stadioListFiltrata.filter(stadio =>
+        stadio.league === this.filtroLeague
+      );
+    }
+    
+    if (this.filtroCity) {
+      this.stadioListFiltrata = this.stadioListFiltrata.filter(stadio =>
+        stadio.name.toLowerCase().includes(this.filtroCity.toLowerCase())
       );
     }
   }
-}
+} 
